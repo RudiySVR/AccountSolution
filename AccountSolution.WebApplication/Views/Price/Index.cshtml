@@ -1,0 +1,75 @@
+﻿@model IEnumerable<AccountSolution.FromAccountClassLibrary.Entities.Price>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.StockCounter)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumbGroup)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StockPriceGroupeID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Stock)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FullName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CountForPack)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ValueForCount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PriceForCount)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.StockCounter)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumbGroup)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StockPriceGroupeID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Stock)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FullName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CountForPack)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ValueForCount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PriceForCount)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>
